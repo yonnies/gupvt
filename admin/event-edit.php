@@ -3,22 +3,11 @@ session_start();
 if ($_SESSION['user_id']==1) 
 {
     include 'event-backend.php'; 
+    include 'admin-header.php';
+    include "admin-navbar.php"
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" type="text/css" href="admin-style2.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>Admin panel</title>
-</head>
-
-<body>
-<?php include "admin-navbar.php"?>
-<div class="d-flex align-items-start">
+<div class="d-flex align-items-start flex-wrap">
 <div class="flex-column">
 
 
@@ -27,7 +16,7 @@ if ($_SESSION['user_id']==1)
     <form method="post" action="event-edit.php" enctype='multipart/form-data'>
     
     Име на събитието:<br>
-    <input id="name" type="text" placeholder="кратко, точно име" name="name" value="<?php echo $name;?>" required>
+    <input id="name" type="text" placeholder="Кратко, точно име" name="name" value="<?php echo $name;?>" required>
     <br><br>
     
     Място:<br>
@@ -43,11 +32,11 @@ if ($_SESSION['user_id']==1)
     <input id="link" type="text" placeholder="Link"  name="link" value="<?php echo $link;?>"required >
     <br><br>
 
-    Снимка:<br>
+    Снимка (Max size 1MB):<br>
     <input id="cover" type="file" name="cover" required >
     <br><br>
    
-    <input type="submit" name="submit_event" value="Submit">
+    <input type="submit" name="submit_event" value="Добавяне">
 
     
     </form> 

@@ -4,13 +4,9 @@ if ($_SESSION['user_id']==1)
 {
     include 'article-backend.php'; 
     include('admin-header.php');
-?>
-<title>Admin panel</title>
-</head>
-<body>
-<?php include "admin-navbar.php"?>
+    include "admin-navbar.php"?>
 
-<div class="d-flex align-items-start">
+<div class="d-flex align-items-start flex-wrap">
 <div class="flex-column">
 
 <div class="admin-element">
@@ -25,11 +21,11 @@ if ($_SESSION['user_id']==1)
     <input id="content" type="text" placeholder="Статия"  name="content" value="<?php echo $content;?>" required>
     <br><br>
     
-    Снимка:<br>
+    Снимка (Max size 1MB):<br>
     <input id="photo" type="file" name="photo" required>
     <br><br>
     
-    <input type="submit" name="submit_article" value="Submit">    
+    <input type="submit" name="submit_article" value="Добавяне">    
     </form> 
 </div>  
   
@@ -67,7 +63,7 @@ if ($_SESSION['user_id']==1)
     <input type="text" placeholder="Съдържание"  name="edit_content" value="<?php echo $content;?>" >
     <br><br>
 
-    Снимка(max size X mb):<br>
+    Снимка (Max size 1MB):<br>
     <input type="file" name="edit_photo" >
     <br><br>
     <input type="submit" name="edit_article" value="Редакция"> 

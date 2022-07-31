@@ -40,20 +40,21 @@ $conn->close();
       
 <div class="colors">              
 <div class="container-fluid ">
-<div class="events-frame row align-items-center">
+<div class="events-frame row">
         
         <?php foreach($events as $event): ?>
             
         <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">    
         <a target="_blank" href="<?php echo $event['link']?>">
         <div class="opaa">
+
             <div class="event-image">
-            
+            <div class="imageHolder">
             <img class="card-img card-img-events" <?php echo 'src = "data:image/jpg;base64,'.base64_encode($event['photo']).'"'?>>
             </div>
-            
+            </div>
         
-            <div class="event-info center">
+            <div class="event-info center card-body">
                     <h3 class="card-content1"> <?php echo htmlspecialchars($event['title']);?> </h3>
                     <p class="card-content2"><b>Дата: </b><?php $time = strtotime(htmlspecialchars($event['date'])); echo $myFormatForView = date("d/m/y", $time); ?><b> &nbsp;&nbsp;  Час: </b><?php echo substr(htmlspecialchars($event['time']),0,5); ?></p>
                     <p class="card-content3"><b>Място: </b><?php echo htmlspecialchars($event['place']); ?>

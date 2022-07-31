@@ -39,7 +39,7 @@ body {
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("photos/cover.png");
+  background-image: url("photos/gup-hero.png");
   /* Set a specific height */
   margin-top: 5vh;
   height: 95vh;
@@ -51,6 +51,14 @@ body {
   position: relative;
 }
 
+@media only screen and (max-width: 900px) {
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: url("photos/gup-hero-mobile.png");
+    margin-top: 0px;
+  }
+}
+
 .section-title {
   font-family: 'Pacifico', cursive;
   font-size: 3.5rem;
@@ -58,7 +66,7 @@ body {
 }
 
 .events {
-  margin-top: 200px;
+  margin-top: 100px;
   background-color: #FFDEE9;
   background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);
   padding: 30px;
@@ -132,6 +140,7 @@ body {
 }
 
 .card-img {
+  width: 100%;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
@@ -149,12 +158,18 @@ body {
   filter: opacity(30%);
 }
 
+@media only screen and (max-width: 1024px) {
+  .opaa {
+    height: auto;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .event-info {
-    position: initial;
-    max-width: 400px;
-    width: auto;
-    margin: 20px auto;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+    margin: auto;
     left: 0;
     -webkit-filter: opacity(100%);
     filter: opacity(100%);
@@ -173,21 +188,23 @@ body {
     box-shadow: 1px 1px 5px #cccccc;
     border-radius: 10px;
     margin-bottom: 20px;
-    padding-bottom: 10px;
     background-color: white;
+    height: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .event-image {
     -webkit-box-shadow: none;
             box-shadow: none;
     border-radius: 0px;
+    display: block;
   }
   .opaa:hover > .event-image {
     margin: 0px;
     -webkit-filter: opacity(100%);
     filter: opacity(100%);
-  }
-  .events {
-    margin-top: 230px;
   }
 }
 
@@ -360,11 +377,6 @@ a:hover {
       -ms-flex-align: center;
           align-items: center;
   max-height: 15rem;
-}
-
-.row {
-  margin-right: 0px !important;
-  margin-left: 0px !important;
 }
 
 .calendar_frame {

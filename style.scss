@@ -42,7 +42,7 @@ html {
   
   .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("photos/cover.png");
+    background-image: url("photos/gup-hero.png");
 
   
     /* Set a specific height */
@@ -56,6 +56,16 @@ html {
     background-size: cover;
     position: relative;
   }
+
+  @media only screen and (max-width: 900px){ 
+    .hero-image {
+      /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+      background-image: url("photos/gup-hero-mobile.png");
+      margin-top: 0px;
+    }
+
+  }
+  
   
   .section-title {
     font-family: 'Pacifico', cursive;
@@ -68,7 +78,7 @@ html {
 
   
   .events {
-    margin-top: 200px;
+    margin-top: 100px;
     background-color: #FFDEE9;
     background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);
     padding: 30px;
@@ -142,7 +152,7 @@ html {
   
 
   .card-img {
-    
+    width: 100%;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
@@ -160,18 +170,23 @@ html {
     -webkit-filter: opacity(30%);
             filter: opacity(30%);
   }
-  
-
+  @media only screen and (max-width: 1024px) {
+    .opaa {
+      height: auto;
+    }
+  }
   @media only screen and (max-width: 600px) {
     .event-info {
-      position: initial;
-      max-width: 400px;
-      width: auto;
-      margin: 20px auto;
+      padding: 10px;
+      width:100%;
+position: relative;
+      margin: auto;
       left: 0;
       -webkit-filter: opacity(100%);
               filter: opacity(100%);
+      
     } 
+
     .br {
       display: none;
     }
@@ -186,21 +201,21 @@ html {
               box-shadow: 1px 1px 5px #cccccc;
       border-radius: 10px;
       margin-bottom: 20px;
-      padding-bottom: 10px;
+      
       background-color: white;
+      height: auto;
+      flex-direction: column;
+      
     }
     .event-image{
       box-shadow: none;
       border-radius: 0px;
+      display: block;
     }
     .opaa:hover > .event-image {
       margin: 0px;
       -webkit-filter: opacity(100%);
               filter: opacity(100%);
-    }
-    
-    .events {
-      margin-top: 230px;
     }
   }
   
@@ -388,14 +403,6 @@ a:hover {
 
 //////////////////////////////////////////////calendar///////////////////////////////////////////////
 
-
-
-.row
-{
-  margin-right:0px !important;
-  margin-left:0px !important;
-  
-}
 .calendar_frame {
     padding: 100px 0px 50px 0px;
     background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);

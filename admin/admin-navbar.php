@@ -1,14 +1,12 @@
 
 <body class="d-flex align-items-start admin-body">
 			<nav id="sidebar">
-        <a href="../main.php"><img src="../photos/gupap.png" alt="Logo" class="logo mt-3 w-50 align-middle"> </a>
+        <a href="../main.php"><img src="../photos/gupap.png" alt="Logo" class="logo mt-3 align-middle"> </a>
         
         <ul class="list-unstyled components mb-5">
-          <!--
-          <li >
-            <a href="dashboard.php">Профил</a>
+          <li>
+              <a href="../main.php">Начало</a>
           </li>
-          -->
           <li>
               <a href="event-edit.php">Събития</a>
           </li>

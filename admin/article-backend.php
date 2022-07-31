@@ -50,7 +50,7 @@ if(isset($_POST['submit_article'])) {
         //save to db
         if($conn->query($sql)) {
             //success
-            echo '<script>alert("Article successfully added")</script>';
+            header('Location: ../news.php');
         } else {
             echo 'query error:'.mysqli_error($conn);
         } 
@@ -65,7 +65,7 @@ if(isset($_POST['delete_article'])) {
         //save to db
         if($conn->query($sql)) {
             //success
-            echo '<script>alert("Article successfully deleted")</script>';
+            header('Location: ../news.php');
         } else {
             echo 'query error:'.mysqli_error($conn);
         }
@@ -102,7 +102,7 @@ if(isset($_POST['edit_article'])) {
 
         if($article_queries) {
             //success
-            echo '<script>alert("Event successfully edited")</script>';
+            header('Location: ../news.php');
         } else {
             echo 'query error:'.mysqli_error($conn);
         }

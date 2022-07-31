@@ -61,7 +61,7 @@ $title = $content = $name = $place = $link = '';
             //save to db
             if($conn->query($sql)) {
                 //success
-                echo '<script>alert("Event successfully edited")</script>';
+                header('Location: ../events.php');
             } else {
                 echo 'query error:'.mysqli_error($conn);
             }
@@ -77,7 +77,7 @@ $title = $content = $name = $place = $link = '';
         //save to db
         if($conn->query($sql)) {
             //success
-            echo '<script>alert("Event successfully deleted")</script>';
+            header('Location: ../events.php');
         } else {
             echo 'query error:'.mysqli_error($conn);
         }
@@ -132,7 +132,7 @@ if(isset($_POST['edit_event'])) {
 
         if($event_queries) {
             //success
-            echo '<script>alert("Event successfully edited")</script>';
+            header('Location: ../events.php');
         } else {
             echo 'query error:'.mysqli_error($conn);
         }
