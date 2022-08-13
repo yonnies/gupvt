@@ -25,7 +25,12 @@ function getCalendar($year = '',$month = '')
 	$date = $dateYear.'-'.$dateMonth.'-01';
 	$currentMonthFirstDay = date("N",strtotime($date));
 
-	$totalDaysOfMonth = cal_days_in_month(CAL_GREGORIAN,$dateMonth,$dateYear);
+	function days_in_month($month, $year)
+	{
+		// calculate number of days in a month
+		return $month == 2 ? ($year % 4 ? 28 : ($year % 100 ? 29 : ($year % 400 ? 28 : 29))) : (($month - 1) % 7 % 2 ? 30 : 31);
+	}
+	$totalDaysOfMonth = days_in_month($dateMonth,$dateYear);
 	
 	$totalDaysOfMonthDisplay = ($currentMonthFirstDay == 1)?($totalDaysOfMonth):($totalDaysOfMonth + $currentMonthFirstDay);
 	

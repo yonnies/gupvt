@@ -4,7 +4,6 @@
         
         <a class="navbar-brand" href="index.php">
         <img src="photos/gupap.png" alt="Logo" style="width:40px;"> 
-        <!--<span class="nav-header">&nbsp;&nbsp;<i>Градски ученически парламент <br> - Велико Търново</i></span>-->
         </a>
 
         <button id="navbar-tog" class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
