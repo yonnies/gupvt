@@ -2,7 +2,7 @@
     <nav id="navbar"class="navbar nav-style navbar-expand-md navbar-light sticky-top">
     <div class="container-fluid">
         
-        <a class="navbar-brand" href="main.php">
+        <a class="navbar-brand" href="index.php">
         <img src="photos/gupap.png" alt="Logo" style="width:40px;"> 
         <!--<span class="nav-header">&nbsp;&nbsp;<i>Градски ученически парламент <br> - Велико Търново</i></span>-->
         </a>

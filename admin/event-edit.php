@@ -98,7 +98,7 @@ if ($_SESSION['user_id']==1)
 </html>
     <?php }
     else {
-        header('Location: ../main.php');
+        header('Location: ../index.php');
 exit();
     }
     ?>
