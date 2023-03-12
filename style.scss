@@ -406,6 +406,7 @@ a:hover {
 .calendar_frame {
     padding: 100px 0px 50px 0px;
     background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);
+    min-width: 100vw;
     h2 {
       background-color: white;
       padding: 6px;
