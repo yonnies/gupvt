@@ -1,37 +1,41 @@
+<!--
+        Web page displaying all current and past events
+-->
 <?php
-include('db-connect.php');
-
-
-//SELECT * FROM SomeTable WHERE id < 6 ORDER BY id DESC LIMIT 4,1
+        // Include the database connection file
+        include('db-connect.php');
         
-if (isset($_GET['pageno'])) {
+        // Check if a page number is set; if not, set it to 1
+        if (isset($_GET['pageno'])) {
             $pageno = $_GET['pageno'];
         } else {
             $pageno = 1;
         }
+        
+        // Define the number of records per page and calculate the offset
         $no_of_records_per_page = 9;
-        $offset = ($pageno-1) * $no_of_records_per_page;
-
+        $offset = ($pageno - 1) * $no_of_records_per_page;
+        
+        // Query to get the total number of records
         $total_pages_sql = "SELECT COUNT(*) FROM events";
-        $result = mysqli_query($conn,$total_pages_sql);
+        $result = mysqli_query($conn, $total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
-
-        $sql = "SELECT id,title, photo, date, time, place,link FROM events ORDER BY id DESC LIMIT $offset, $no_of_records_per_page";
-        $res_data = mysqli_query($conn,$sql);
         
-        //fetch the resulting rows in an array 
-        $i=0;
-        while($row = mysqli_fetch_array($res_data)){
-            $events[$i]=$row;
+        // Query to retrieve a subset of events for the current page
+        $sql = "SELECT id, title, photo, date, time, place, link FROM events ORDER BY id DESC LIMIT $offset, $no_of_records_per_page";
+        $res_data = mysqli_query($conn, $sql);
+        
+        // Fetch the resulting rows into an array
+        $i = 0;
+        while ($row = mysqli_fetch_array($res_data)) {
+            $events[$i] = $row;
             $i++;
         }
-       
         
-        
-//free result form memory
-mysqli_free_result($result);
-$conn->close();
+        // Free the result from memory and close the database connection
+        mysqli_free_result($result);
+        $conn->close();
 ?>
 
 
@@ -44,35 +48,39 @@ $conn->close();
         
         <?php foreach($events as $event): ?>
             
-        <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">    
-        <a target="_blank" href="<?php echo $event['link']?>">
-        <div class="opaa">
+        <!-- Start: Individual Event Display -->
+                <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">    
+                    <a target="_blank" href="<?php echo $event['link']?>">
+                        <div class="opaa">
 
-            <div class="event-image">
-            <div class="imageHolder">
-            <img class="card-img card-img-events" <?php echo 'src = "data:image/jpg;base64,'.base64_encode($event['photo']).'"'?>>
-            </div>
-            </div>
-        
-            <div class="event-info center card-body">
-                    <h3 class="card-content1"> <?php echo htmlspecialchars($event['title']);?> </h3>
-                    <p class="card-content2"><b>Дата: </b><?php $time = strtotime(htmlspecialchars($event['date'])); echo $myFormatForView = date("d/m/y", $time); ?><b> &nbsp;&nbsp;  Час: </b><?php echo substr(htmlspecialchars($event['time']),0,5); ?></p>
-                    <p class="card-content3"><b>Място: </b><?php echo htmlspecialchars($event['place']); ?>
-         
-            </div>
-        </div>
-            <div class="br">
-            <br>
-            
-            </div>
-            </a>
-        </div>
-           
+                            <!-- Event Image -->
+                            <div class="event-image">
+                                <div class="imageHolder">
+                                    <!-- Display the event image using base64 encoding -->
+                                    <img class="card-img card-img-events" <?php echo 'src = "data:image/jpg;base64,'.base64_encode($event['photo']).'"'?>>
+                                </div>
+                            </div>
+                        
+                            <!-- Event Information -->
+                            <div class="event-info center card-body">
+                                <h3 class="card-content1"> <?php echo htmlspecialchars($event['title']);?> </h3>
+                                <p class="card-content2">
+                                    <!-- Display event date in a specific format -->
+                                    <b>Дата: </b><?php $time = strtotime(htmlspecialchars($event['date'])); echo $myFormatForView = date("d/m/y", $time); ?>
+                                    <b> &nbsp;&nbsp;  Час: </b><?php echo substr(htmlspecialchars($event['time']),0,5); ?>
+                                </p>
+                                <p class="card-content3"><b>Място: </b><?php echo htmlspecialchars($event['place']); ?>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <!-- End: Individual Event Display -->
         <?php endforeach; ?>
 </div>
 </div>
         
-
+<!-- Pagination Section -->
 <div class="container-fluid padding">
 <div class="row padding">
         <ul class="pagination">
