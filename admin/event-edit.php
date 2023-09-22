@@ -1,3 +1,6 @@
+<!--
+    Admin Article Management Page
+-->
 <?php 
 session_start();
 if ($_SESSION['user_id']==1) 
