@@ -94,7 +94,7 @@ html {
   .colors{
     background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);
   }
-  .event-holder {
+  .opaa {
     position: relative;
     height: 35vh;  
     display: flex;
@@ -158,12 +158,12 @@ html {
         align-self: center;
   }
   
-  .event-holder:hover > .event-info {
+  .opaa:hover > .event-info {
     -webkit-filter: opacity(100%);
             filter: opacity(100%);
   }
   
-  .event-holder:hover > .event-image {
+  .opaa:hover > .event-image {
     margin-right: -10px;
     margin-left: -10px;
   
@@ -171,7 +171,7 @@ html {
             filter: opacity(30%);
   }
   @media only screen and (max-width: 1024px) {
-    .event-holder {
+    .opaa {
       height: auto;
     }
   }
@@ -196,7 +196,7 @@ position: relative;
       border-radius: 0px;
       max-height: 214px;
     }
-    .event-holder {
+    .opaa {
       -webkit-box-shadow: 1px 1px 5px #cccccc;
               box-shadow: 1px 1px 5px #cccccc;
       border-radius: 10px;
@@ -212,7 +212,7 @@ position: relative;
       border-radius: 0px;
       display: block;
     }
-    .event-holder:hover > .event-image {
+    .opaa:hover > .event-image {
       margin: 0px;
       -webkit-filter: opacity(100%);
               filter: opacity(100%);
