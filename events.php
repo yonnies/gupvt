@@ -51,7 +51,7 @@
         <!-- Start: Individual Event Display -->
                 <div class="col-xl-3 col-md-4 col-sm-6 col-xs-12">    
                     <a target="_blank" href="<?php echo $event['link']?>">
-                        <div class="opaa">
+                        <div class="event-holder">
 
                             <!-- Event Image -->
                             <div class="event-image">
