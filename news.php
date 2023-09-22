@@ -1,37 +1,42 @@
+<!--
+        Web page displaying articles and news about the organization's activity
+-->
+
 <?php
-include('db-connect.php');
-
-
-//SELECT * FROM SomeTable WHERE id < 6 ORDER BY id DESC LIMIT 4,1
+        // Include the database connection file
+        include('db-connect.php');
         
-if (isset($_GET['pageno'])) {
+        // Check if 'pageno' is set in the URL; if not, default to page 1
+        if (isset($_GET['pageno'])) {
             $pageno = $_GET['pageno'];
         } else {
             $pageno = 1;
         }
+        
+        // Define the number of records to display per page and calculate the offset
         $no_of_records_per_page = 9;
-        $offset = ($pageno-1) * $no_of_records_per_page;
-
+        $offset = ($pageno - 1) * $no_of_records_per_page;
+        
+        // Retrieve the total number of records in the 'articles' table for pagination
         $total_pages_sql = "SELECT COUNT(*) FROM articles";
-        $result = mysqli_query($conn,$total_pages_sql);
+        $result = mysqli_query($conn, $total_pages_sql);
         $total_rows = mysqli_fetch_array($result)[0];
         $total_pages = ceil($total_rows / $no_of_records_per_page);
-
-        $sql = "SELECT id,title, content, photo, date FROM articles ORDER BY id DESC LIMIT $offset, $no_of_records_per_page";
-        $res_data = mysqli_query($conn,$sql);
         
-        //fetch the resulting rows in an array 
-        $i=0;
-        while($row = mysqli_fetch_array($res_data)){
-            $articles[$i]=$row;
+        // Define a SQL query to retrieve articles for the current page
+        $sql = "SELECT id, title, content, photo, date FROM articles ORDER BY id DESC LIMIT $offset, $no_of_records_per_page";
+        $res_data = mysqli_query($conn, $sql);
+        
+        // Initialize an array to store article data
+        $i = 0;
+        while ($row = mysqli_fetch_array($res_data)) {
+            $articles[$i] = $row;
             $i++;
         }
-       
         
-        
-//free result form memory
-mysqli_free_result($result);
-$conn->close();
+        // Free the result from memory and close the database connection
+        mysqli_free_result($result);
+        $conn->close();
 ?>
 
 
