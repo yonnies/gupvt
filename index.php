@@ -45,7 +45,7 @@
             <!-- Start: Individual Event Display -->
             <div class="col-md-4 col-sm-6 col-xs-12">
                 <a target="_blank" href="<?php echo $event['link']?>">
-                    <div class="event-holder">
+                    <div class="opaa">
                         <div class="event-image">
                             <div class="imageHolder">
                                 <!-- Display the event image using base64 encoding -->
