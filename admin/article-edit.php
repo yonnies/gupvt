@@ -24,7 +24,7 @@ if ($_SESSION['user_id'] == 1)
                 <br><br>
     
                 Статия:<br>
-                <input id="content" type="text" placeholder="Статия"  name="content" value="<?php echo $content;?>" required>
+                <input id="content" class="article-content" type="text" name="content" value="<?php echo $content;?>" required>
                 <br><br>
     
                 Снимка (Max size 1MB):<br>
@@ -60,12 +60,12 @@ if ($_SESSION['user_id'] == 1)
             </select>
             <br>
     
-            Промяна на име:<br>
-            <input type="text" placeholder="Кратко, точно име" name="edit_title" value="<?php echo $title;?>" >
+            Промяна на заглавие:<br>
+            <input type="text" placeholder="Заглавие" name="edit_title" value="<?php echo $title;?>" >
             <br><br>
     
             Промяна на съдържание:<br>
-            <input type="text" placeholder="Съдържание"  name="edit_content" value="<?php echo $content;?>" >
+            <input class="article-content" type="text" name="edit_content" value="<?php echo $content;?>" >
             <br><br>
     
             Снимка (Max size 1MB):<br>
