@@ -87,25 +87,25 @@
                  
         
         <div class="col-lg-3 col-md-6 value">   
-        <img src="images/svg/004-balance.svg" alt="" class="value-img">
+        <img src="images/004-balance.svg" alt="" class="value-img">
             <h4>Равенство</h4>
             <p>"Всеки има право на глас, подкрепа и свободно време"</p> 
         </div>
         
         <div class="col-lg-3 col-md-6 value">    
-            <img src="images/svg/001-team.svg" alt="" class="value-img">
+            <img src="images/001-team.svg" alt="" class="value-img">
             <h4>Единност</h4>
             <p>"Сами можем много, заедно можем всичко"</p>
         </div>
         
         <div class="col-lg-3 col-md-6 value">    
-        <img src="images/svg/003-lightbulb.svg" alt="" class="value-img">
+        <img src="images/003-lightbulb.svg" alt="" class="value-img">
             <h4>Идейност</h4>
             <p>"Идеите са само първата стъпка. Магията се случва, когато започнем да развиваме тези идеи"</p>
         </div>
         
         <div class="col-lg-3 col-md-6  value">    
-            <img src="images/svg/005-passkey.svg" alt="" class="value-img">
+            <img src="images/005-passkey.svg" alt="" class="value-img">
             <h4>Нови светове</h4>
             <p>"Младите не са бъдеще, не са минало, те са настояще"</p>
         </div>
