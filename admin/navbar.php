@@ -1,7 +1,7 @@
 <body class="d-flex align-items-start admin-body">
     <nav id="sidebar">
         <!-- Logo Link -->
-        <a href="../index.php"><img src="../photos/gupap.png" alt="Logo" class="logo mt-3 align-middle"></a>
+        <a href="../index.php"><img src="../images/gupap.png" alt="Logo" class="logo mt-3 align-middle"></a>
         
         <!-- Navigation Menu -->
         <ul class="list-unstyled components mb-5">

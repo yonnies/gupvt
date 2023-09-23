@@ -3,7 +3,7 @@
         <div class="container-fluid">
             <!-- Logo -->
             <a class="navbar-brand" href="index.php">
-                <img src="photos/gupap.png" alt="Logo" style="width: 40px;">
+                <img src="images/gupap.png" alt="Logo" style="width: 40px;">
             </a>
 
             <!-- Navigation Toggle Button -->
@@ -22,7 +22,7 @@
                         <a class="nav-link" href="calendar.php">Календар</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="news.php">Новини</a>
+                        <a class="nav-link" href="articles.php">Новини</a>
                     </li>
                     <!-- Check if the user is logged in as an admin -->
                     <?php

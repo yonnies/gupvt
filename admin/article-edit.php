@@ -10,8 +10,8 @@ if ($_SESSION['user_id'] == 1)
 {
     // Include necessary backend and UI components
     include 'article-backend.php'; 
-    include('admin-header.php');
-    include "admin-navbar.php"
+    include 'header.php';
+    include 'navbar.php';
 ?>
 
 <div class="d-flex align-items-start flex-wrap">

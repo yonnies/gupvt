@@ -66,7 +66,7 @@ if (isset($_POST['submit_article'])) {
         // Save the article to the database
         if ($conn->query($sql)) {
             // Redirect to the news page upon success
-            header('Location: ../news.php');
+            header('Location: ../articles.php');
         } else {
             echo 'Query error: '.mysqli_error($conn);
         }
@@ -87,7 +87,7 @@ if (isset($_POST['delete_article'])) {
         // Execute the query and delete the article from the database
         if ($conn->query($sql)) {
             // Redirect to the news page upon successful deletion
-            header('Location: ../news.php');
+            header('Location: ../articles.php');
         } else {
             // Handle query error, if any
             echo 'Query error: '.mysqli_error($conn);
@@ -137,7 +137,7 @@ if (isset($_POST['edit_article'])) {
         // Check if any of the editing queries were successful
         if ($article_queries) {
             // Redirect to the news page upon successful editing
-            header('Location: ../news.php');
+            header('Location: ../articles.php');
         } else {
             // Handle query error, if any
             echo 'Query error: '.mysqli_error($conn);

@@ -3,7 +3,7 @@
 -->
 <?php
 // Include the database connection file
-include('db-connect.php');
+include('../db-connect.php');
 
 // Define a SQL query to select titles of events in descending order of ID
 $sql = "SELECT title FROM events ORDER BY id DESC";

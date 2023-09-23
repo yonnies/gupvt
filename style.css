@@ -39,7 +39,7 @@ body {
 
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: url("photos/gup-hero.png");
+  background-image: url("images/gup-hero.png");
   /* Set a specific height */
   margin-top: 5vh;
   height: 95vh;
@@ -54,7 +54,7 @@ body {
 @media only screen and (max-width: 900px) {
   .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: url("photos/gup-hero-mobile.png");
+    background-image: url("images/gup-hero-mobile.png");
     margin-top: 0px;
   }
 }
@@ -82,7 +82,7 @@ body {
   background-image: linear-gradient(240deg, #fff1f6 0%, #ebfffe 100%);
 }
 
-.opaa {
+.image-holder {
   position: relative;
   height: 35vh;
   display: -webkit-box;
@@ -146,12 +146,12 @@ body {
   align-self: center;
 }
 
-.opaa:hover > .event-info {
+.image-holder:hover > .event-info {
   -webkit-filter: opacity(100%);
   filter: opacity(100%);
 }
 
-.opaa:hover > .event-image {
+.image-holder:hover > .event-image {
   margin-right: -10px;
   margin-left: -10px;
   -webkit-filter: opacity(30%);
@@ -159,7 +159,7 @@ body {
 }
 
 @media only screen and (max-width: 1024px) {
-  .opaa {
+  .image-holder {
     height: auto;
   }
 }
@@ -183,7 +183,7 @@ body {
     border-radius: 0px;
     max-height: 214px;
   }
-  .opaa {
+  .image-holder {
     -webkit-box-shadow: 1px 1px 5px #cccccc;
     box-shadow: 1px 1px 5px #cccccc;
     border-radius: 10px;
@@ -201,7 +201,7 @@ body {
     border-radius: 0px;
     display: block;
   }
-  .opaa:hover > .event-image {
+  .image-holder:hover > .event-image {
     margin: 0px;
     -webkit-filter: opacity(100%);
     filter: opacity(100%);

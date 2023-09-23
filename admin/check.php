@@ -1,10 +1,6 @@
-<!--
-    Admin Login Authentication Script
--->
-
 <?php
+    // Admin Login Authentication Script 
     session_start();
-    
     if ( isset( $_POST['login'] ) ) {
         include("../db-connect.php");
         $user = mysqli_real_escape_string($conn,$_POST['user']);

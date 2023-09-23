@@ -12,7 +12,7 @@ Pages
 - index.php - Home page
 - events.php - List of all events
 - calendar.php - Calendar of events page
-- news.php - List of all news
+- articles.php - List of all articles
 - article.php - Separate article page
 
 Includes
@@ -25,23 +25,21 @@ Assets
 - style.css - Stylesheet files
 - js/ - Javascript files
 - images/ - Image files
-- photos/ - Image files
 
 Admin Pages
-- admin/admin.php - Login system
+- admin/login.php - Login system
 - admin/article-edit.php - Manage events
 - admin/event-edit.php - Manage articles
 
 Admin includes
 - admin/event-backend.php - Database interaction handling
 - admin/article-backend.php - Database interaction handling
-- admin/admin-header.php - Admin dashboard header
-- admin/admin-navbar.php - Admin dashboard navigation bar
-- admin/db-connect.php - Database connection
+- admin/header.php - Admin dashboard header
+- admin/navbar.php - Admin dashboard navigation bar
 - admin/logout.php - Logout functionality 
 
 Admin Assets
-- admin-style.css - Stylesheet files
+- admin/style.css - Stylesheet files
 
 Tables:
 - users - Stores admin accounts
@@ -74,7 +72,7 @@ Heroku
 - Formats date and truncates time before display
 - Encodes event photo blob to base64 for HTML
 
-### news.php
+### articles.php
 
 - Implements pagination for displaying article listings
 - SELECTs articles from database with LIMIT for current page
@@ -114,6 +112,7 @@ Modifications made by Yoana Yakova:
 - Verifies submitted password matches hashed password
 - Returns JSON response indicating login success/failure
 - On success, sets admin user ID in session for authorization
+- If error occurs, displays error message
 - Escapes user inputs before query to prevent SQL injection
 - Exits after JSON response to avoid unauthorized access
 

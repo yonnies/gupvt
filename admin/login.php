@@ -76,6 +76,19 @@
                 window.location.href="event-edit.php";
               }
             },
+            error: function(jqXHR, textStatus, errorThrown) {
+
+            // Log error to console
+            console.log(textStatus); 
+            console.log(errorThrown);
+
+            // Check if request completed 
+            if (jqXHR.status == 0) {
+              alert('Connection refused or request aborted');
+            } else {
+              alert('AJAX request failed with status ' + jqXHR.status + ': ' + errorThrown); 
+            }
+            },
             dataType:"json"
         });
        });
