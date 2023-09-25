@@ -1,10 +1,13 @@
 # Town Student Parliament 
+#### Video Demo: https://youtu.be/E1qQqXuMPBc
+#### Link: https://gupvt.herokuapp.com/index.php
+#### Description:
 
 ## Youth organisation brief
 
-This website was created for the Town Student Parliament of Veliko Tarnovo - an organisation that unites ambitious students from all schools in the town. They aim to make their town a more interesting place to live and help those who are in need. Through their participation students develop their teamwork, event management and communication skills.
+This website was created for the Town Student Parliament of Veliko Tarnovo - an organisation that unites ambitious students from all schools in the town. They aim to make their town a more interesting place to live and help those who are in need. Through their participation, students develop their teamwork, event management and communication skills.
 
-The main aims of the website is to structure and gather in one platform all of the student's past and future activities. In enables them to advertise new events that they are planning, keep a record of old ones and share engaging articles about their past work and achievements.
+The main aim of the website is to structure and gather in one platform all of the student's past and future activities. It enables them to advertise new events that they are planning, keep a record of old ones and share engaging articles about their past work and achievements.
 
 ## Website structure
 
