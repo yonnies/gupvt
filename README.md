@@ -97,6 +97,9 @@ Modifications made by Yoana Yakova:
 - Enhanced event display by embedding event lists within each date cell.
 - Implemented dynamic pop-up text boxes to provide detailed event information.
 
+
+## Admin dashboard
+
 ### login.php
 
 - Login page for admin access to site management
